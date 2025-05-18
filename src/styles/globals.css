@@ -1,0 +1,33 @@
+/* src/styles/globals.css */
+
+/* CSS Reset + Box Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* CSS Variables */
+:root {
+  --color-bg: #f9f9f9;
+  --color-primary: #4f46e5;
+  --color-text: #333;
+  --color-border: #e5e7eb;
+  --header-height: 56px;
+}
+
+/* Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Utility Classes (optional) */
+.hidden {
+  display: none !important;
+}

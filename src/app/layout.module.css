@@ -1,0 +1,48 @@
+.main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  height: calc(100vh - 60px); /* Adjust according to your header height */
+}
+
+.main > * {
+  flex-grow: 1;
+  overflow-y: auto;
+  border-right: 1px solid #ccc;
+}
+
+.main > :first-child {
+  flex-basis: 20%; /* Sidebar */
+}
+
+.main > :nth-child(2) {
+  flex-basis: 60%; /* Chat Area (ChatWindow + MessageInput) */
+  display: flex;
+  flex-direction: column;
+}
+
+.main > :last-child {
+  flex-basis: 20%; /* User List */
+}
+
+.chatArea {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.messageInputArea {
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  background: #f9f9f9;
+}
+
+.noChatSelected {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 18px;
+  color: #999;
+}
+
