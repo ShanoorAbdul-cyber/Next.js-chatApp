@@ -20,11 +20,12 @@
   .active {
     background: var(--color-bg);
   }
-  
+
   .avatar {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    margin-right: 0.75rem;
-  }
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
   

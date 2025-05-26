@@ -10,7 +10,8 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.title}>APP</div>
       {user && <div className={styles.userMenu}>
-        <img /*src={ '/default-avatar.png'}*/ className={styles.avatar} />
+       <div className={styles.title}>Hello {user.username}</div>
+        <img src={ '/default-avatar.png'} className={styles.avatar} />
         <div className={styles.dropdown}>
           <div className={styles.menuItem} onClick={() => {/* go to /profile */ }}>
             Edit Profile
@@ -20,7 +21,6 @@ export default function Header() {
           </div>
         </div>
       </div>}
-      
     </header>
   );
 }

@@ -40,16 +40,23 @@ export default function LoginPage() {
         });
         toast.success(data.message);
         login(data.user);
-        router.push('/');          // ← redirect home
+        router.push('/');
       } else {
+        // Registration flow
         const data = await doAuth('/api/auth/register', {
           username: form.username,
           email: form.email,
           password: form.password,
         });
         toast.success(data.message);
-        login({ username: form.username, email: form.email });
-        router.push('/');          // ← redirect home
+        setMode('login');
+        setForm({
+          username: '',
+          email: form.email,
+          password: '',
+        });
+        
+        toast.success('Registration successful! Please log in.');
       }
     } catch (err) {
       toast.error(err.message);
@@ -99,7 +106,7 @@ export default function LoginPage() {
       <div className={styles.toggle}>
         {mode === 'login' ? (
           <>
-            Don’t have an account?
+            Don't have an account?
             <button onClick={() => setMode('register')}>Register</button>
           </>
         ) : (

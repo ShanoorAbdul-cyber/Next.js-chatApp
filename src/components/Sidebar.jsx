@@ -9,7 +9,11 @@ export default function Sidebar({ chats, activeId, onSelect }) {
           className={`${styles.item} ${chat.id === activeId ? styles.active : ''}`}
           onClick={() => onSelect(chat.id)}
         >
-          <img src={chat.avatar || '/default-avatar.png'} className={styles.avatar} />
+          <img
+            src={chat.avatar || '/default-avatar.png'}
+            className={styles.avatar}
+            alt={`${chat.name}'s avatar`}
+          />
           <span>{chat.name}</span>
         </div>
       ))}
