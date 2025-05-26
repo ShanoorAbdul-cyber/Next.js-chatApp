@@ -1,8 +1,7 @@
-/* src/app/login/page.module.css */
-
 /* Container */
 .container {
     max-width: 320px;
+    max-height: 300px;
     margin: 2rem auto;
     padding: 1rem;
     background: #fff;
