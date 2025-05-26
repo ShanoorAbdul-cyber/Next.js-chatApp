@@ -16,9 +16,9 @@ export default function RootLayout({ children }) {
           <main className={styles.main}>
             {children}
           </main>
-          <footer className={styles.footer}>
+          {/* <footer className={styles.footer}>
             <p>&copy; 2023 Chat App. All rights reserved.</p>
-          </footer>
+          </footer> */}
         </LoginProvider>
       </body>
     </html>
